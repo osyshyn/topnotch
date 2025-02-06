@@ -4,6 +4,10 @@
 @theme {  
 
     --font-brand: "Source Sans Pro", sans-serif;
+    --font-brand-size: 18px;
+    --font-brand-weight: 400;
+
+
     --font-brand-title: "Playfair Display", sans-serif;
 
 
@@ -11,5 +15,7 @@
     --color-brand-orange: #F06E19;
     --color-brand-blue: #4F78D6;
     --color-brand-dark: #0F0F0F;
+    --color-brand-gray: #A1A1A1;
   }
   
+ 

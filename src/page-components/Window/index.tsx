@@ -1,5 +1,5 @@
-import React, { FC, ReactNode } from "react";
-import cn from "classnames";
+import { FC, ReactNode } from 'react';
+import cn from 'classnames';
 
 interface Props {
   children: ReactNode;
@@ -7,12 +7,7 @@ interface Props {
 }
 
 export const Window: FC<Props> = ({ children, className }) => (
-  <div
-    className={cn(
-      "bg-[#4F78D6] rounded-[30px] p-8",
-      className
-    )}
-  >
+  <div className={cn('rounded-[30px] bg-[#4F78D6] p-8', className)}>
     {children}
   </div>
 );

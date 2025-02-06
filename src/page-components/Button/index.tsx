@@ -1,4 +1,4 @@
-import React, { FC, memo, MouseEventHandler, ReactNode } from 'react';
+import { FC, memo, MouseEventHandler, ReactNode } from 'react';
 import cn from 'classnames';
 import { BUTTON_STYLE_VARIANTS } from './constants';
 import { ButtonVariants } from '../../@types/button';

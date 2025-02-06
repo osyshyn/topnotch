@@ -1,5 +1,4 @@
-import React from "react";
-import { PageWrapper } from "../../components/Layouts/PageWrapper";
+import { PageWrapper } from '../../components/Layouts/PageWrapper';
 
 const AboutUs = () => {
   return (

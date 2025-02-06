@@ -1,5 +1,3 @@
-export const Title = ({text}) => {
-    return(
-        <h1 className="font-brand-title text-[80px] fonr-[700]">{text}</h1>
-    )
-}
+export const Title = () => {
+  return <h1 className="font-brand-title fonr-[700] text-[80px]"></h1>;
+};

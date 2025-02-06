@@ -1,4 +1,3 @@
-import React from 'react';
 import { Window } from '../../../page-components/Window';
 
 const servicesData = [

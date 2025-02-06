@@ -1,13 +1,25 @@
 export const PATHNAMES = {
-    HOME: "/",
+  HOME: '/',
 
-    ABOUT: "/about",
-    
-    SERVICES: "/services",
+  ABOUT: '/about',
+  ABOUT_TEAM: '/about/team',
+  ABOUT_RATES: '/about/rates',
+  ABOUT_FAQ: '/about/faq',
+  ABOUT_PRIVACY: '/about/privacy-policy',
 
-    CASES: "/cases",
+  SERVICES: '/services',
+  SERVICES_MANAGED: '/services/managed',
+  SERVICES_CYBERSECURITY: '/services/cybersecurity',
+  SERVICES_NETWORK: '/services/network',
+  SERVICES_CONSULTING: '/services/consulting',
+  SERVICES_COMMERCIAL: '/services/commercial',
+  SERVICES_RESIDENTIAL: '/services/residential',
+  SERVICES_REPAIR: '/services/repair',
+  SERVICES_CUSTOM: '/services/custom',
 
-    CONTACT_US: "/contact-us",
+  CASES: '/cases',
 
-    NEW: "/new",
-}
+  CONTACT_US: '/contact-us',
+
+  NEW: '/new',
+};

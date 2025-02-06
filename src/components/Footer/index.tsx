@@ -1,5 +1,4 @@
-import React from 'react';
-import Logo from "../../assets/icons/TopNotch-logo-no-tagline 1.png";
+import Logo from "../../assets/img/TopNotch-logo-no-tagline 1.png";
 
 export const Footer = () => {
   return (

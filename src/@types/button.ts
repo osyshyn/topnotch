@@ -1,5 +1,6 @@
 export enum ButtonVariants {
-   ORANGE = "orange",
-   BLUE = "blue",
-  }
-  
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary',
+  PRIMARY_SQUARE = 'primary-square',
+  SECONDARY_SQUARE = 'secondary-square',
+}

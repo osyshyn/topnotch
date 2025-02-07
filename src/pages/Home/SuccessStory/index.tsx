@@ -7,7 +7,7 @@ export const SuccessStory = () => {
     <div className="w-full bg-white px-4 py-20 lg:px-20">
       <div className="mx-auto max-w-7xl">
         <div className="mb-16 flex flex-col items-start justify-between lg:flex-row">
-          <h2 className="mb-8 max-w-xl text-4xl font-bold text-[#1C1C1C] lg:mb-0 lg:text-5xl">
+          <h2 className="font-brand-title mb-8 max-w-xl text-4xl font-bold text-[#1C1C1C] lg:mb-0 lg:text-5xl">
             Achieve The Right
             <br />
             Success With Top Notch

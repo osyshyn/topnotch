@@ -116,7 +116,7 @@ const servicesData = [
 
 export const ServicesGrid = () => {
   return (
-    <Window className="w-[80%]">
+    <Window className="w-[80%] bg-[#4F78D6]">
       <div className="mb-4 text-center">
         <h2 className="mb-2 text-4xl font-bold text-white">Our Services</h2>
         <p className="text-white/80">

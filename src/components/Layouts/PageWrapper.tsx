@@ -1,7 +1,7 @@
-import React, { FC, ReactNode } from "react";
-import cn from "classnames";
-import { Header } from "../Header";
-import { Footer } from "../Footer";
+import { FC, ReactNode } from 'react';
+import cn from 'classnames';
+import { Header } from '../Header';
+import { Footer } from '../Footer';
 
 interface Props {
   children: ReactNode;
@@ -19,22 +19,24 @@ export const PageWrapper: FC<Props> = ({
   return (
     <div>
       {/* Fixed Header */}
-      <div className=" top-0 left-0 right-0 z-50">
+      <div className="top-0 right-0 left-0 z-50">
         <Header />
       </div>
 
       {/* Main Content with padding for header and footer */}
       <div
         className={cn(
-          "scrollbar flex flex-1 flex-col gap-4 overflow-y-auto",
+          'scrollbar flex flex-1 flex-col gap-4 overflow-y-auto',
           className
         )}
       >
-        <main className={cn("flex-1 items-center", mainClassName)}>{children}</main>
+        <main className={cn('flex-1 items-center', mainClassName)}>
+          {children}
+        </main>
       </div>
 
       {/* Fixed Footer */}
-      <div className=" bottom-0 left-0 right-0 z-40">
+      <div className="right-0 bottom-0 left-0 z-40">
         <Footer />
       </div>
 

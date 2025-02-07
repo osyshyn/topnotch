@@ -7,7 +7,7 @@ interface Props {
 }
 
 export const Window: FC<Props> = ({ children, className }) => (
-  <div className={cn('rounded-[30px] bg-[#4F78D6] p-8', className)}>
+  <div className={cn('rounded-[30px]  p-10', className)}>
     {children}
   </div>
 );

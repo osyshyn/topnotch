@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '../../page-components/Button';
@@ -33,7 +33,7 @@ export default function Carousel({ cards }: CarouselProps) {
     <div className="mx-auto flex w-full max-w-[1000px] flex-col">
       <div className="max-h-screen max-w-screen overflow-hidden" ref={emblaRef}>
         <div className="flex gap-10">
-          {cards.map((card, index) => (
+          {cards.map((card) => (
             <div className="min-h-[350px] min-w-[300px] rounded-3xl bg-[#4F78D6]">
               <div className="flex flex-col items-start justify-start p-10">
                 <p className="font-brand text-[20px] text-white">

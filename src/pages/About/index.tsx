@@ -3,8 +3,7 @@ import { PageWrapper } from '../../components/Layouts/PageWrapper';
 const AboutUs = () => {
   return (
     <PageWrapper>
-      <h1>Про нас</h1>
-      <p>Це сторінка про нашу компанію.</p>
+      <h1>About Us</h1>
     </PageWrapper>
   );
 };

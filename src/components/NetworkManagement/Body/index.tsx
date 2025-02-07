@@ -71,7 +71,7 @@ export const Body = () => {
         <h2 className="font-brand-title text-center text-[48px] font-[700]">
           Comprehensive Business IT Solutions
         </h2>
-        <div className="mt-10">
+        <div className="mt-10 flex justify-center gap-20">
           <div className="flex flex-col gap-10">
             <h3 className="font-brend border-l border-[#252423] pl-6 text-[24px] font-[600] text-[#1C1C1C]">
               Staff Augmentation for the workforce

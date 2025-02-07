@@ -3,7 +3,7 @@ import { VideoPlayer } from '../../../page-components/VideoPlayer';
 
 export const Benefits = () => {
   return (
-    <div className="mt-[150px] flex items-center justify-between gap-20">
+    <div className="mt-[150px] flex items-center justify-between gap-20 pb-[80px]">
       {/* <!-- Video --> */}
       <div>
         <VideoPlayer />

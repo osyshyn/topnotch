@@ -6,6 +6,7 @@ import CyberSecurityPage from '../pages/CyberSecurity';
 import { useRoutes } from 'react-router-dom';
 import NetworkManagement from '../pages/NetworkManagement';
 import Managed from '../pages/Managed';
+import Commercial from '../pages/Commercial';
 
 const ROUTES = [
   {
@@ -24,6 +25,10 @@ const ROUTES = [
   {
     element: <Managed />,
     path: PATHNAMES.SERVICES_MANAGED,
+  },
+  {
+    element: <Commercial />,
+    path: PATHNAMES.SERVICES_COMMERCIAL,
   },
   // {
   //   element: <AboutUs />,

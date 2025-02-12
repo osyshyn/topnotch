@@ -116,55 +116,57 @@ const servicesData = [
 
 export const ServicesGrid = () => {
   return (
-    <Window className="mx-auto w-full max-w-7xl bg-[#4F78D6] p-6 sm:p-8 md:mb-28 md:p-12">
-      <div className="mb-4 text-center">
-        <h2 className="font-brand-title mb-6 text-3xl font-bold text-white sm:text-[80px]">
-          Our Services
-        </h2>
-        <p className="font-brand font-brand-weight text-sm text-white sm:text-2xl">
-          We have a high list of services for any of your problems
-        </p>
-      </div>
+    <div className="mx-[80px]">
+      <Window className="mx-auto w-full bg-[#4F78D6] p-6 sm:p-8 md:mb-28 md:p-12">
+        <div className="mb-4 text-center">
+          <h2 className="font-brand-title mb-6 text-3xl font-bold text-white sm:text-[80px]">
+            Managed IT Support Services
+          </h2>
+          <p className="font-brand font-brand-weight text-sm text-white sm:text-2xl">
+            from Top Notch – What to Expect?
+          </p>
+        </div>
 
-      <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {servicesData.map((service, index) => (
-          <div
-            key={index}
-            className={`rounded-[20px] p-6 ${index === 2 ? 'bg-[#3559AD]' : 'bg-none'}`}
-          >
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-white text-[#4F78D6] max-sm:hidden">
-              {service.icon}
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {servicesData.map((service, index) => (
+            <div
+              key={index}
+              className={`rounded-[20px] p-6 ${index === 2 ? 'bg-[#3559AD]' : 'bg-none'}`}
+            >
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-white text-[#4F78D6] max-sm:hidden">
+                {service.icon}
+              </div>
+              <h3 className="mb-2 text-lg font-semibold text-white sm:text-xl">
+                {service.title}
+              </h3>
+              <p className="text-sm leading-relaxed text-white/80">
+                {service.description}
+              </p>
             </div>
-            <h3 className="mb-2 text-lg font-semibold text-white sm:text-xl">
-              {service.title}
-            </h3>
-            <p className="text-sm leading-relaxed text-white/80">
-              {service.description}
-            </p>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <div className="mt-8 text-center">
-        <button className="inline-flex items-center rounded-full bg-white px-6 py-3 font-semibold text-[#4F78D6] transition-colors hover:bg-blue-50">
-          View All
-          <svg
-            className="ml-2 h-4 w-4"
-            viewBox="0 0 16 16"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M4 12L12 4M12 4H5M12 4V11"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-      </div>
-    </Window>
+        <div className="mt-8 text-center">
+          <button className="inline-flex items-center rounded-full bg-white px-6 py-3 font-semibold text-[#4F78D6] transition-colors hover:bg-blue-50">
+            View All
+            <svg
+              className="ml-2 h-4 w-4"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 12L12 4M12 4H5M12 4V11"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </Window>
+    </div>
   );
 };
 

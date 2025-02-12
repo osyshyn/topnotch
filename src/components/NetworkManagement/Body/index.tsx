@@ -32,7 +32,7 @@ export const Body = () => {
       </div>
       <div className="mt-[70px] flex justify-between gap-20 px-20">
         <div>
-          <img src={PersonImg} alt="PersonImg" />
+          <img src={PersonImg} alt="PersonImg" className="h-full w-fit" />
         </div>
         <Window className="border-brand-gray max-w-[735px] border bg-white">
           <div>

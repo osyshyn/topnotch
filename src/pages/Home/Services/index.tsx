@@ -1,13 +1,16 @@
-import { Company } from "./Company"
-import { Residential } from "./Residential"
+import { Company } from './Company';
+import { Residential } from './Residential';
 
 export const Services = () => {
-    return(
-        <div className="px-[80px] flex flex-col gap-12 mb-20 bg-brand-black w-full ">
+  return (
+    <>
+      {' '}
+      <div className="bg-brand-black flex w-full flex-col gap-12 px-[80px]">
         {/* Commercial Services */}
-        <Company/>
+        <Company />
         {/* Residential Services */}
-        <Residential/>
+        <Residential />
       </div>
-    )
-}
+    </>
+  );
+};

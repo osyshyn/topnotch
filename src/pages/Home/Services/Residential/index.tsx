@@ -7,36 +7,31 @@ import { Button } from '../../../../page-components/Button';
 
 export const Residential = () => {
   return (
-    <div className="flex items-center justify-between space-y-6">
-      <div className="mt-6">
-        <img src={Computer} alt="" width={500} height={400} />
+    <div className="grid grid-cols-1 items-center gap-8 p-6 sm:p-12 md:grid-cols-2 lg:p-20">
+      <div className="flex justify-center">
+        <img src={Computer} alt="" className="h-auto max-w-full" />
       </div>
 
-      <div>
-        <h2 className="font-brand-title text-5xl font-bold text-white">
+      <div className="flex flex-col justify-center">
+        <h2 className="font-brand-title text-4xl font-bold text-white sm:text-5xl">
           Residential Services
         </h2>
-        <p className="font-brand mt-4 max-w-[550px] text-[18px] font-[400] text-white">
+        <p className="font-brand mt-4 max-w-xl text-lg text-white">
           Professional, personalized services in the Charlottesville, Richmond,
           and D.C. areas for PCs, Macs, and home networks.
         </p>
-        <ul className="font-brand mt-10 space-y-4 text-[16px] font-[400] text-white">
-          <li className="flex items-center gap-2">
-            <img src={Checkmark} alt="" width={24} height={24} />
-            Computer Diagnostics & Repairs
-          </li>
-          <li className="flex items-center gap-2">
-            <img src={Checkmark} alt="" width={24} height={24} />
-            New, Used, Refurbished, & Custom PCs
-          </li>
-          <li className="flex items-center gap-2">
-            <img src={Checkmark} alt="" width={24} height={24} />
-            Networking & Printing Solutions
-          </li>
-          <li className="flex items-center gap-2">
-            <img src={Checkmark} alt="" width={24} height={24} />
-            Virus & Spyware Removal
-          </li>
+        <ul className="font-brand mt-10 space-y-4 text-white">
+          {[
+            'Computer Diagnostics & Repairs',
+            'New, Used, Refurbished, & Custom PCs',
+            'Networking & Printing Solutions',
+            'Virus & Spyware Removal',
+          ].map((text, index) => (
+            <li key={index} className="flex items-center gap-2">
+              <img src={Checkmark} alt="" width={24} height={24} />
+              {text}
+            </li>
+          ))}
         </ul>
         <Button className="mt-10 rounded-full" variant={ButtonVariants.PRIMARY}>
           Residential

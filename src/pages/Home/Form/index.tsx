@@ -7,52 +7,58 @@ import { TextareaField } from '../../../page-components/TextareaField';
 
 export const Form = () => {
   return (
-    <div className="bg-brand-black mt-[375px] w-full py-16 pl-6">
-      <div className="flex items-center justify-between">
-        {/* Left Content */}
-        <div className="max-w-[662px] pl-[52px]">
-          <h2 className="font-brand-title mb-8 text-[48px] font-bold text-white">
-            Begin Your Journey Today
-          </h2>
-          <p className="font-brand mt-4 max-w-[620px] text-[18px] font-normal text-white">
-            Get started today by contacting one of our experienced consultants.
-            We'll guide you step by step to modernize your IT, drive meaningful
-            business outcomes, and achieve your goals.
-          </p>
+    <>
+      <div className="bg-brand-black mt-[-2px] w-full px-4 py-10 md:px-20 md:py-16 md:pr-0 md:pb-[150px]">
+        <div className="flex flex-wrap items-center justify-center overflow-hidden md:justify-between">
+          {/* Left Content */}
+          <div className="max-w-full text-center md:max-w-[662px] md:text-left">
+            <h2 className="font-brand-title mb-6 text-[32px] font-bold text-white md:text-[48px]">
+              Begin Your Journey Today
+            </h2>
+            <p className="font-brand text-[16px] font-normal text-white md:text-[18px]">
+              Get started today by contacting one of our experienced
+              consultants. We'll guide you step by step to modernize your IT,
+              drive meaningful business outcomes, and achieve your goals.
+            </p>
 
-          {/* Form */}
-          <form className="mt-10 w-full space-y-4">
-            <div className="grid grid-cols-2 gap-4">
-              <InputField type="text" placeholder="Name" />
-              <InputField type="tel" placeholder="Phone" />
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <InputField type="text" placeholder="Address" />
-              <InputField type="email" placeholder="Email" />
-            </div>
-            <TextareaField placeholder="Message*" rows={6} />
-          </form>
+            {/* Form */}
+            <form className="mt-8 w-full space-y-4">
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                <InputField type="text" placeholder="Name" />
+                <InputField type="tel" placeholder="Phone" />
+              </div>
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+                <InputField type="text" placeholder="Address" />
+                <InputField type="email" placeholder="Email" />
+              </div>
+              <TextareaField placeholder="Message*" rows={6} />
+            </form>
 
-          {/* Submit Button */}
-          <Button
-            className="mt-10 rounded-full"
-            variant={ButtonVariants.PRIMARY}
-          >
-            Submit Now
+            {/* Submit Button */}
+            <Button
+              className="mt-8 w-full rounded-full md:w-auto"
+              variant={ButtonVariants.PRIMARY}
+            >
+              Submit Now
+              <img
+                src={ArrowUp}
+                className="ml-2 h-4 w-4"
+                alt=""
+                aria-hidden="true"
+              />
+            </Button>
+          </div>
+
+          {/* Right Image (Hidden on small & if it doesn't fit) */}
+          <div className="hidden max-w-[40%] lg:block">
             <img
-              src={ArrowUp}
-              className="ml-2 h-4 w-4"
-              alt=""
-              aria-hidden="true"
+              src={CompSearch}
+              alt="CompSearch"
+              className="h-auto w-full object-contain"
             />
-          </Button>
-        </div>
-
-        {/* Right Image */}
-        <div>
-          <img src={CompSearch} alt="CompSearch" />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };

@@ -1,7 +1,7 @@
-import { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Button } from '../../page-components/Button';
+import { useCallback, useEffect, useState } from 'react';
+import { Button } from '../Button';
 
 interface Card {
   title: string;

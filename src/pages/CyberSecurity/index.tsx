@@ -1,12 +1,12 @@
-import PageTitle from '../../components/PageTitle';
-import SectionImage from '../../assets/cyber-security-1sec.svg';
-import { Button } from '../../page-components/Button';
 import { ButtonVariants } from '../../@types/button';
+import SectionImage from '../../assets/cyber-security-1sec.svg';
 import ArrowUp from '../../assets/icon/carbon_arrow-up-right.svg';
-import SquareIcon from '../../assets/icon/sqaure.svg';
-import Carousel from './Carousel';
 import CyberSecurityLogo from '../../assets/icon/cybersecurity.svg';
+import SquareIcon from '../../assets/icon/sqaure.svg';
 import { PageWrapper } from '../../components/Layouts/PageWrapper';
+import PageTitle from '../../components/PageTitle';
+import { Button } from '../../page-components/Button';
+import Carousel from '../../page-components/Carusel/left';
 import { Form } from '../Home/Form';
 
 const CyberSecurityPage = () => {

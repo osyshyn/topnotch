@@ -2,24 +2,29 @@ import { FC } from 'react';
 import { PATHNAMES } from '../constants/routes';
 // import AboutUs from "../pages/About";
 import Home from '../pages/Home';
-import CyberSecurityPage from "../pages/CyberSecurity";
+import CyberSecurityPage from '../pages/CyberSecurity';
 import { useRoutes } from 'react-router-dom';
 import NetworkManagement from '../pages/NetworkManagement';
+import Managed from '../pages/Managed';
 
 const ROUTES = [
   {
     element: <Home />,
     path: PATHNAMES.HOME,
   },
-  
+
   {
-    element: <NetworkManagement/>,
+    element: <NetworkManagement />,
     path: PATHNAMES.SERVICES_NETWORK,
   },
   {
-    element: <CyberSecurityPage/>,
+    element: <CyberSecurityPage />,
     path: PATHNAMES.SERVICES_CYBERSECURITY,
-  }
+  },
+  {
+    element: <Managed />,
+    path: PATHNAMES.SERVICES_MANAGED,
+  },
   // {
   //   element: <AboutUs />,
   //   path: PATHNAMES.ABOUT_US,

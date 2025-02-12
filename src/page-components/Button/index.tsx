@@ -26,7 +26,7 @@ export const Button: FC<Props> = memo(
     form,
   }) => {
     const combinedClassNames = cn(
-      'flex justify-center items-center outline-0 transition ease-in-out duration-200 active:translate-y-0.5 active:duration-150 active:brightness-95 disabled:opacity-50 disabled:active:translate-y-0 disabled:brightness-100',
+      'max-w-[200px] flex justify-center items-center outline-0 transition ease-in-out duration-200 active:translate-y-0.5 active:duration-150 active:brightness-95 disabled:opacity-50 disabled:active:translate-y-0 disabled:brightness-100',
       variant ? BUTTON_STYLE_VARIANTS[variant] : '',
       className
     );

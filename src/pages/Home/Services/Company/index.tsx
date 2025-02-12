@@ -2,55 +2,44 @@ import { ButtonVariants } from '../../../../@types/button';
 import ArrowUp from '../../../../assets/icon/carbon_arrow-up-right.svg';
 import Checkmark from '../../../../assets/icon/checkmark-square-02.svg';
 
-import Computer from '../../../../assets/img/computer.png';
 import { Button } from '../../../../page-components/Button';
+
+import ComputerBusiness from '../../../../assets/img/computer.png';
 
 export const Company = () => {
   return (
-    <div className="flex items-center justify-between">
-      <div>
-        <h2 className="font-brand-title text-5xl font-bold text-white">
+    <div className="grid grid-cols-1 items-center gap-8 p-6 sm:p-12 md:grid-cols-2 lg:p-20">
+      <div className="flex flex-col justify-center">
+        <h2 className="font-brand-title text-4xl font-bold text-white sm:text-5xl">
           Commercial Services
         </h2>
-        <p className="font-brand mt-4 max-w-[660px] text-[18px] font-[400] text-white">
-          Design, development, implementation, and support-all from one
+        <p className="font-brand mt-4 max-w-xl text-lg text-white">
+          Design, development, implementation, and support—all from one
           qualified provider. Your company or medical practice deserves the best
           in IT support.
         </p>
-        <div className="mt-10 grid grid-cols-2 gap-8 text-white">
-          {/* Перша колонка */}
-          <ul className="font-brand space-y-4 text-[16px] font-[400]">
-            <li className="flex items-center gap-2">
+        <div className="mt-10 grid grid-cols-1 gap-8 text-white sm:grid-cols-2">
+          {[
+            'Network Support & Systems Administration',
+            'Staff Augmentation',
+            'Computer Equipment & Repairs',
+          ].map((text, index) => (
+            <li key={index} className="flex items-center gap-2">
               <img src={Checkmark} alt="" width={24} height={24} />
-              Network Support & Systems Administration
+              {text}
             </li>
-            <li className="flex items-center gap-2">
+          ))}
+          {[
+            'Management Software',
+            'Cyber Security',
+            'And many other services...',
+          ].map((text, index) => (
+            <li key={index} className="flex items-center gap-2">
               <img src={Checkmark} alt="" width={24} height={24} />
-              Staff Augmentation
+              {text}
             </li>
-            <li className="flex items-center gap-2">
-              <img src={Checkmark} alt="" width={24} height={24} />
-              Computer Equipment & Repairs
-            </li>
-          </ul>
-
-          {/* Друга колонка */}
-          <ul className="font-brand space-y-4 text-[16px] font-[400]">
-            <li className="flex items-center gap-2">
-              <img src={Checkmark} alt="" width={24} height={24} />
-              Management Software
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={Checkmark} alt="" width={24} height={24} />
-              Cyber Security
-            </li>
-            <li className="flex items-center gap-2">
-              <img src={Checkmark} alt="" width={24} height={24} />
-              And many other services...
-            </li>
-          </ul>
+          ))}
         </div>
-
         <Button className="mt-10 rounded-full" variant={ButtonVariants.PRIMARY}>
           Contact Us
           <img
@@ -62,8 +51,8 @@ export const Company = () => {
         </Button>
       </div>
 
-      <div className="mt-6">
-        <img src={Computer} alt="" width={500} height={400} />
+      <div className="flex justify-center">
+        <img src={ComputerBusiness} alt="" className="h-auto max-w-full" />
       </div>
     </div>
   );

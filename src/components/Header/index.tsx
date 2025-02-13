@@ -3,10 +3,13 @@ import { Navigation } from './Navigation';
 import ArrowUp from '../../assets/icon/carbon_arrow-up-right.svg';
 import { Button } from '../../page-components/Button';
 import { ButtonVariants } from '../../@types/button';
+import { useRef } from 'react';
 
 export const Header = () => {
+  const headerRef = useRef<HTMLDivElement | null>(null);
+
   return (
-    <header className="bg-brand-black w-full">
+    <header ref={headerRef} className="bg-brand-black w-full">
       <div className="mx-auto flex items-center justify-between px-4 py-4 lg:w-full lg:px-8 xl:container">
         {/* Logo */}
         <a href="/" className="flex-shrink-0">
@@ -15,7 +18,7 @@ export const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden items-center lg:flex lg:space-x-4 xl:space-x-8">
-          <Navigation />
+          <Navigation headerRef={headerRef} />
           <Button className="rounded-full" variant={ButtonVariants.PRIMARY}>
             Contact Us
             <img

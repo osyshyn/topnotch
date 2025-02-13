@@ -5,7 +5,7 @@ export const Services = () => {
   return (
     <>
       {' '}
-      <div className="bg-brand-black flex w-full flex-col gap-12 px-[80px]">
+      <div className="bg-brand-black flex w-full flex-col gap-15 px-5 lg:px-10 xl:px-[80px]">
         {/* Commercial Services */}
         <Company />
         {/* Residential Services */}

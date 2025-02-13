@@ -8,17 +8,19 @@ import ComputerBusiness from '../../../../assets/img/computer.png';
 
 export const Company = () => {
   return (
-    <div className="grid grid-cols-1 items-center gap-8 p-6 sm:p-12 md:grid-cols-2 lg:p-20">
+    <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 xl:p-20">
       <div className="flex flex-col justify-center">
         <h2 className="font-brand-title text-4xl font-bold text-white sm:text-5xl">
           Commercial Services
         </h2>
-        <p className="font-brand mt-4 max-w-xl text-lg text-white">
-          Design, development, implementation, and support—all from one
-          qualified provider. Your company or medical practice deserves the best
-          in IT support.
-        </p>
-        <div className="mt-10 grid grid-cols-1 gap-8 text-white sm:grid-cols-2">
+        <div className="font-brand relative mt-4 max-w-xl text-lg text-white md:h-[60px] md:w-[570px] lg:h-auto lg:w-auto">
+          <p className="md:absolute lg:relative">
+            Design, development, implementation, and support—all from one
+            qualified provider. Your company or medical practice deserves the
+            best in IT support.
+          </p>
+        </div>
+        <div className="mt-10 grid grid-cols-1 gap-2 text-white lg:grid-cols-2 lg:gap-8">
           {[
             'Network Support & Systems Administration',
             'Staff Augmentation',
@@ -51,7 +53,7 @@ export const Company = () => {
         </Button>
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex lg:justify-center">
         <img src={ComputerBusiness} alt="" className="h-auto max-w-full" />
       </div>
     </div>

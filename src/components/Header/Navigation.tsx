@@ -1,10 +1,46 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { NAVIGATION_LINKS, navItems } from './constants';
 
-export const Navigation = () => {
+interface INavigationProps {
+  headerRef: React.RefObject<HTMLDivElement | null>;
+}
+
+export const Navigation = ({ headerRef }: INavigationProps) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const timeoutRef = useRef<number | undefined>(undefined);
+  const [headerWidth, setHeaderWidth] = useState(0);
+
+  useEffect(() => {
+    if (headerRef.current) {
+      setHeaderWidth(headerRef.current.offsetWidth);
+    }
+
+    const handleResize = () => {
+      if (headerRef.current) {
+        const screenWidth = window.innerWidth;
+
+        let paddingLeft = 16;
+        let paddingRight = 16;
+
+        if (screenWidth >= 1024) {
+          paddingLeft = 32;
+          paddingRight = 32;
+        }
+
+        const widthWithoutPadding =
+          headerRef.current.clientWidth - paddingLeft - paddingRight;
+
+        setHeaderWidth(widthWithoutPadding);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [headerRef]);
 
   const handleMouseEnter = () => {
     clearTimeout(timeoutRef.current);
@@ -14,7 +50,7 @@ export const Navigation = () => {
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setIsDropdownOpen(false);
-    }, 300); // ⏳ Затримка 300 мс перед закриттям
+    }, 300);
   };
 
   return (
@@ -37,7 +73,8 @@ export const Navigation = () => {
               {/* Dropdown for "Services" */}
               {hasSubmenu && isDropdownOpen && (
                 <div
-                  className="absolute top-full left-1/2 mt-7 w-[1280px] -translate-x-1/2 transform rounded-[20px] border border-[#f06e19] bg-white px-8 py-8 text-black shadow-lg"
+                  style={{ width: headerWidth }}
+                  className={`fixed left-1/2 mt-7 -translate-x-1/2 transform rounded-[20px] border border-[#f06e19] bg-white px-8 py-8 text-black shadow-lg`}
                   onMouseEnter={handleMouseEnter}
                   onMouseLeave={handleMouseLeave}
                 >

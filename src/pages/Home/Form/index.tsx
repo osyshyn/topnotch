@@ -8,10 +8,10 @@ import { TextareaField } from '../../../page-components/TextareaField';
 export const Form = () => {
   return (
     <>
-      <div className="bg-brand-black mt-[-2px] w-full px-4 py-10 md:px-20 md:py-16 md:pr-0 md:pb-[150px]">
-        <div className="flex flex-wrap items-center justify-center overflow-hidden md:justify-between">
+      <div className="bg-brand-black mt-[-2px] w-full px-10 py-10 md:px-20 md:py-16 md:pb-[150px] xl:pr-0">
+        <div className="flex flex-wrap items-center justify-center overflow-hidden xl:justify-between">
           {/* Left Content */}
-          <div className="max-w-full text-center md:max-w-[662px] md:text-left">
+          <div className="flex max-w-full flex-col text-center md:max-w-[662px] md:text-left">
             <h2 className="font-brand-title mb-6 text-[32px] font-bold text-white md:text-[48px]">
               Begin Your Journey Today
             </h2>
@@ -36,7 +36,7 @@ export const Form = () => {
 
             {/* Submit Button */}
             <Button
-              className="mt-8 w-full rounded-full md:w-auto"
+              className="mt-8 w-full self-center rounded-full md:w-auto md:self-auto"
               variant={ButtonVariants.PRIMARY}
             >
               Submit Now
@@ -50,7 +50,7 @@ export const Form = () => {
           </div>
 
           {/* Right Image (Hidden on small & if it doesn't fit) */}
-          <div className="hidden max-w-[40%] lg:block">
+          <div className="hidden max-w-[40%] xl:block">
             <img
               src={CompSearch}
               alt="CompSearch"

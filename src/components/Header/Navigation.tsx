@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { NAVIGATION_LINKS, navItems } from './constants';
 
 interface INavigationProps {
-  headerRef: React.RefObject<HTMLDivElement | null>;
+  headerRef?: React.RefObject<HTMLDivElement | null>;
 }
 
 export const Navigation = ({ headerRef }: INavigationProps) => {
@@ -13,8 +13,8 @@ export const Navigation = ({ headerRef }: INavigationProps) => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (headerRef.current) {
-        const headerWidth = headerRef.current.offsetWidth;
+      if (headerRef?.current) {
+        const headerWidth = headerRef?.current.offsetWidth;
         console.log(headerWidth);
 
         let paddingLeft = 16;
@@ -31,7 +31,7 @@ export const Navigation = ({ headerRef }: INavigationProps) => {
       }
     };
 
-    if (headerRef.current) {
+    if (headerRef?.current) {
       handleResize();
     }
 

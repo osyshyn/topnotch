@@ -9,7 +9,11 @@ export const Residential = () => {
   return (
     <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 xl:p-20">
       <div className="flex justify-center">
-        <img src={Computer} alt="" className="h-auto max-w-full" />
+        <img
+          src={Computer}
+          alt=""
+          className="h-auto md:max-w-[301px] lg:max-w-full"
+        />
       </div>
 
       <div className="flex flex-col justify-center">
@@ -20,7 +24,7 @@ export const Residential = () => {
           Professional, personalized services in the Charlottesville, Richmond,
           and D.C. areas for PCs, Macs, and home networks.
         </p>
-        <ul className="font-brand mt-10 space-y-4 text-white">
+        <ul className="font-brand mt-10 grid grid-cols-1 gap-2 text-white lg:gap-8 lg:space-y-4">
           {[
             'Computer Diagnostics & Repairs',
             'New, Used, Refurbished, & Custom PCs',

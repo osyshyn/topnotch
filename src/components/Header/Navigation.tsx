@@ -55,7 +55,7 @@ export const Navigation = ({ headerRef }: INavigationProps) => {
 
   return (
     <nav>
-      <ul className="font-brand mr-10 flex items-center gap-10 py-4 text-[18px] text-white xl:mr-[200px]">
+      <ul className="font-brand mr-8 flex items-center py-4 text-[18px] text-white lg:gap-8 xl:mr-[200px] xl:gap-10">
         {NAVIGATION_LINKS.map(({ id, label, href }) => {
           const hasSubmenu = navItems.find((item) => item.label === label);
 

@@ -1,6 +1,6 @@
 export const Hero = () => {
   return (
-    <div className="bg-brand-black flex w-full flex-wrap items-center justify-center px-5 pt-[100px] lg:px-10 xl:px-6">
+    <div className="bg-brand-black flex w-full flex-wrap items-center justify-center px-5 pt-[100px] md:px-10 xl:px-6">
       <div className="max-w-2xl">
         <h1 className="font-brand-title text-center text-[80px] font-[700] text-white">
           Virginia's Choice For{' '}

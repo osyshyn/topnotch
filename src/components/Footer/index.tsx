@@ -3,18 +3,22 @@ import Square from '../../assets/icon/sqaure.svg';
 
 export const Footer = () => {
   return (
-    <footer className="flex w-full flex-col bg-[#191919] px-10 pt-14 pb-10 md:px-20">
+    <footer className="flex w-full flex-col bg-[#191919] px-5 pt-14 pb-10 md:px-10 xl:px-20">
       <div className="flex flex-col gap-10">
         {/* Header Row */}
-        <div className="flex flex-row justify-between border-b border-white/30 pb-8">
-          <img className="h-[68px] w-[323px]" src={Logo} alt="TopNotch Logo" />
+        <div className="flex flex-col items-center border-b border-white/30 pb-8 lg:flex-row lg:items-start lg:justify-between">
+          <img
+            className="w-[228px] lg:h-[68px] lg:w-[323px]"
+            src={Logo}
+            alt="TopNotch Logo"
+          />
           <div className="flex flex-row items-center gap-6">
             <img
               className="hidden w-[72px] lg:block"
               src={Square}
               alt="Square"
             />
-            <p className="max-w-[372px] font-['Source_Sans_Pro'] text-lg leading-[1.6] font-normal text-white/60">
+            <p className="max-w-[372px] text-center font-['Source_Sans_Pro'] text-lg leading-[1.6] font-normal text-white/60 lg:text-start">
               Providing premier computer and network support to businesses and
               home users in Virginia.
             </p>
@@ -23,7 +27,7 @@ export const Footer = () => {
 
         {/* Sales & Support Section */}
         <div className="flex flex-row gap-12">
-          <div className="flex flex-[0.2] flex-col gap-5">
+          <div className="flex flex-1 flex-col gap-5 lg:flex-[0.2]">
             <h4 className="font-['Source_Sans_Pro'] text-base leading-5 font-bold text-white">
               Sales & Service inquiries
             </h4>
@@ -31,7 +35,7 @@ export const Footer = () => {
               info@topnotchcomputers.com
             </p>
           </div>
-          <div className="flex flex-[0.2] flex-col gap-5">
+          <div className="flex flex-1 flex-col gap-5 lg:flex-[0.2]">
             <h4 className="font-['Source_Sans_Pro'] text-base leading-5 font-bold text-white">
               Support Requests
             </h4>
@@ -39,7 +43,7 @@ export const Footer = () => {
               support@topnotchcomputers.com
             </p>
           </div>
-          <div className="flex flex-[0.2] flex-col gap-5">
+          <div className="flex flex-1 flex-col gap-5 lg:flex-[0.2]">
             <h4 className="font-['Source_Sans_Pro'] text-base leading-5 font-bold text-white">
               Call toll-free
             </h4>
@@ -51,7 +55,7 @@ export const Footer = () => {
 
         {/* Address Section */}
         <div className="flex flex-row gap-12">
-          <div className="flex flex-[0.2] flex-col gap-5">
+          <div className="flex flex-1 flex-col gap-5 lg:flex-[0.2]">
             <h4 className="font-['Source_Sans_Pro'] text-base leading-5 font-bold text-white">
               Richmond
             </h4>
@@ -64,7 +68,7 @@ export const Footer = () => {
               804-404-7200
             </p>
           </div>
-          <div className="flex flex-[0.2] flex-col gap-5">
+          <div className="flex flex-1 flex-col gap-5 lg:flex-[0.2]">
             <h4 className="font-['Source_Sans_Pro'] text-base leading-5 font-bold text-white">
               Washington D.C.
             </h4>
@@ -77,7 +81,7 @@ export const Footer = () => {
               703-459-9990
             </p>
           </div>
-          <div className="flex flex-[0.2] flex-col gap-5">
+          <div className="flex flex-1 flex-col gap-5 lg:flex-[0.2]">
             <h4 className="font-['Source_Sans_Pro'] text-base leading-5 font-bold text-white">
               Charlottesville
             </h4>

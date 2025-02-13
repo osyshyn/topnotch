@@ -4,7 +4,7 @@ import ArrowUp from '../../../assets/icon/carbon_arrow-up-right.svg';
 
 export const SuccessStory = () => {
   return (
-    <div className="w-full bg-white px-5 py-16 sm:py-20 lg:mt-28 lg:mb-36 lg:px-10 xl:px-6">
+    <div className="w-full bg-white px-5 py-16 sm:py-20 md:px-10 lg:mt-28 lg:mb-36 xl:px-6">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 flex flex-col items-center text-center lg:mb-16 lg:flex-row lg:items-start lg:text-left">
           <h2 className="font-brand-title mb-6 max-w-2xl text-3xl font-bold text-[#1C1C1C] sm:text-4xl lg:mb-0 lg:text-5xl">

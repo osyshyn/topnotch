@@ -53,8 +53,12 @@ export const Company = () => {
         </Button>
       </div>
 
-      <div className="flex lg:justify-center">
-        <img src={ComputerBusiness} alt="" className="h-auto max-w-full" />
+      <div className="relative flex lg:justify-center">
+        <img
+          src={ComputerBusiness}
+          alt=""
+          className="h-auto md:absolute md:right-0 md:max-w-[301px] lg:max-w-full"
+        />
       </div>
     </div>
   );

@@ -10,9 +10,9 @@ interface Card {
 
 interface CarouselProps {
   cards: Card[];
-  cardColor?: string; // background color for cards
-  arrowColor?: string; // text/indicator color for arrows
-  textColor?: string; // text color for card text
+  cardColor?: string;
+  arrowColor?: string;
+  textColor?: string;
 }
 
 export default function Carousel({
@@ -38,7 +38,7 @@ export default function Carousel({
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="mx-auto flex w-full max-w-[1000px] flex-col">
+    <div className="mx-auto flex w-full flex-col">
       <div className="max-h-screen max-w-screen overflow-hidden" ref={emblaRef}>
         <div className="flex gap-10">
           {cards.map((card, index) => (

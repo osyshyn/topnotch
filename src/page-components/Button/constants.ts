@@ -15,5 +15,5 @@ export const BUTTON_STYLE_VARIANTS = {
   [ButtonVariants.PRIMARY_SQUARE]:
     'bg-purple-base text-white-base text-sm rounded px-6 py-3 text-[18px] font-[600]',
   [ButtonVariants.SECONDARY_SQUARE]:
-    'bg-white border border-brand-blue text-brand-blue text-sm rounded px-6 py-3  hover:bg-[#4F78D6] hover:text-white text-[18px] font-[600]',
+    'bg-white border border-brand-blue text-brand-blue text-sm rounded px-6 py-3   text-[18px] font-[600]',
 };

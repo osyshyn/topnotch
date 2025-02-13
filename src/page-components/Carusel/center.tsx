@@ -6,14 +6,22 @@ import { Button } from '../Button';
 interface Card {
   title: string;
   description: string;
-  icon?: string; // Додаємо шлях до іконки
+  icon?: string;
 }
 
 interface CarouselProps {
   cards: Card[];
+  arrowColor?: string;
+  cardTextColor?: string;
+  cardBgColor?: string;
 }
 
-export default function CarouselCenter({ cards }: CarouselProps) {
+export default function CarouselCenter({
+  cards,
+  arrowColor = 'text-white',
+  cardTextColor = 'text-brand-black',
+  cardBgColor = 'bg-white',
+}: CarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel();
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
@@ -37,21 +45,20 @@ export default function CarouselCenter({ cards }: CarouselProps) {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="min-h-[350px] min-w-[300px] rounded-3xl bg-white shadow-lg"
+              className={`min-h-[350px] min-w-[300px] rounded-3xl shadow-lg ${cardBgColor}`}
             >
               <div className="flex flex-col items-start justify-start p-10">
-                {card?.icon && (
+                {card.icon && (
                   <img
                     src={card.icon}
                     alt={card.title}
                     className="mb-4 h-12 w-12"
                   />
                 )}
-
-                <p className="font-brand text-brand-black text-[20px]">
+                <p className={`font-brand ${cardTextColor} text-[20px]`}>
                   {card.title}
                 </p>
-                <p className="font-brand text-brand-black mt-10 text-[18px]">
+                <p className={`font-brand ${cardTextColor} mt-10 text-[18px]`}>
                   {card.description}
                 </p>
               </div>
@@ -65,14 +72,14 @@ export default function CarouselCenter({ cards }: CarouselProps) {
           onClick={() => emblaApi?.scrollPrev()}
           isDisabled={!canScrollPrev}
         >
-          <ChevronLeft className="text-white" />
+          <ChevronLeft className={arrowColor} />
         </Button>
         <Button
           className="h-10 w-10 rounded-full border-2 border-white"
           onClick={() => emblaApi?.scrollNext()}
           isDisabled={!canScrollNext}
         >
-          <ChevronRight className="text-white" />
+          <ChevronRight className={arrowColor} />
         </Button>
       </div>
     </div>

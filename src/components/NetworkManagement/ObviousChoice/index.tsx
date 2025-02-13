@@ -12,7 +12,6 @@ export const ObviousChoice = () => {
       </div>
 
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
-        {/* Here for You */}
         <div className="space-y-4 border-l border-[#252423] pl-6">
           <h3 className="text-xl font-semibold text-[#1C1C1C]">People</h3>
           <p className="leading-relaxed text-gray-600">
@@ -22,7 +21,6 @@ export const ObviousChoice = () => {
           </p>
         </div>
 
-        {/* Professionals, not Geeks */}
         <div className="space-y-4 border-l border-[#252423] pl-6">
           <h3 className="text-xl font-semibold text-[#1C1C1C]">Strategy</h3>
           <p className="leading-relaxed text-gray-600">
@@ -32,7 +30,6 @@ export const ObviousChoice = () => {
           </p>
         </div>
 
-        {/* Dependable Service Quality */}
         <div className="space-y-4 border-l border-[#252423] pl-6">
           <h3 className="text-xl font-semibold text-[#1C1C1C]">Execution</h3>
           <p className="leading-relaxed text-gray-600">
@@ -41,7 +38,6 @@ export const ObviousChoice = () => {
           </p>
         </div>
 
-        {/* Here to Stay */}
         <div className="space-y-4 border-l border-[#252423] pl-6">
           <h3 className="text-xl font-semibold text-[#1C1C1C]">Outcomes</h3>
           <p className="leading-relaxed text-gray-600">

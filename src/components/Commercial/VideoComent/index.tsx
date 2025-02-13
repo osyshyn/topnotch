@@ -4,7 +4,7 @@ import apostrophe from '../../../assets/img/“.png';
 
 export const VideoComent = () => {
   return (
-    <div className="mx-20 mt-[70px] grid grid-cols-2 gap-20 pb-[150px]">
+    <div className="mx-[80px] mt-[70px] grid grid-cols-2 gap-20 pb-[150px]">
       <div>
         <VideoPlayer />
       </div>

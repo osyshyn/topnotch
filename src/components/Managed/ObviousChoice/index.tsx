@@ -12,7 +12,6 @@ export const ObviousChoice = () => {
       </div>
 
       <div className="flex flex-col gap-8 md:flex-row md:justify-between">
-        {/* Left column */}
         <div className="w-full space-y-4 md:w-1/2">
           <div className="border-l border-[#252423] pl-6">
             <p className="text-brand-black font-brand text-2xl leading-relaxed font-semibold">
@@ -33,7 +32,6 @@ export const ObviousChoice = () => {
           </div>
         </div>
 
-        {/* Right column */}
         <div className="w-full space-y-4 md:w-1/2">
           <div className="border-l border-[#252423] pl-6">
             <p className="text-brand-black font-brand text-2xl leading-relaxed font-semibold">

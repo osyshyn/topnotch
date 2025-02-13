@@ -7,6 +7,7 @@ import { useRoutes } from 'react-router-dom';
 import NetworkManagement from '../pages/NetworkManagement';
 import Managed from '../pages/Managed';
 import Commercial from '../pages/Commercial';
+import CustomComputers from '../pages/CustomComputers';
 
 const ROUTES = [
   {
@@ -30,15 +31,10 @@ const ROUTES = [
     element: <Commercial />,
     path: PATHNAMES.SERVICES_COMMERCIAL,
   },
-  // {
-  //   element: <AboutUs />,
-  //   path: PATHNAMES.ABOUT_US,
-  // },
-
-  //   {
-  //     element: <Services />,
-  //     path: PATHNAMES.SERVICES,
-  //   },
+  {
+    element: <CustomComputers />,
+    path: PATHNAMES.SERVICES_CUSTOM,
+  },
 ];
 
 const AppRoutes: FC = () => {

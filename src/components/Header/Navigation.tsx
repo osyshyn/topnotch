@@ -1,13 +1,17 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { NAVIGATION_LINKS, navItems } from './constants';
+import {
+  NavigationList,
+  DropdownContainer,
+  DropdownGrid,
+  DropdownLink,
+  DropdownItemTitle,
+  DropdownItemDescription,
+} from './Sidebar.components';
 
-interface INavigationProps {
-  headerRef?: React.RefObject<HTMLDivElement | null>;
-}
-
-export const Navigation = ({ headerRef }: INavigationProps) => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+export const Navigation = () => {
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const timeoutRef = useRef<number | undefined>(undefined);
   const [headerWidth, setHeaderWidth] = useState(0);
 
@@ -42,64 +46,60 @@ export const Navigation = ({ headerRef }: INavigationProps) => {
     };
   }, [headerRef]);
 
-  const handleMouseEnter = () => {
+  const handleMouseEnter = (label: string) => {
     clearTimeout(timeoutRef.current);
-    setIsDropdownOpen(true);
+    setActiveDropdown(label);
   };
 
-  const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => {
-      setIsDropdownOpen(false);
+  const handleMouseLeave = () => 
+    timeoutRef.current = window.setTimeout(() => {
+      setActiveDropdown(null);
     }, 300);
   };
 
   return (
     <nav>
-      <ul className="font-brand mr-8 flex items-center py-4 text-[18px] text-white lg:gap-8 xl:mr-[200px] xl:gap-10">
-        {NAVIGATION_LINKS.map(({ id, label, href }) => {
-          const hasSubmenu = navItems.find((item) => item.label === label);
+      <NavigationList>
+        {NAVIGATION_LINKS.map(({ id, label = '', href }) => {
+          const submenuData = navItems.find((item) => item.label === label);
+          const hasSubmenu = Boolean(submenuData);
 
           return (
             <li
               key={id}
               className="relative"
-              onMouseEnter={handleMouseEnter}
+              onMouseEnter={() => handleMouseEnter(label)}
               onMouseLeave={handleMouseLeave}
             >
-              <Link to={href} className="hover:text-[#f06e19]">
+              <Link to={href || '#'} className="hover:text-[#f06e19]">
                 {label}
               </Link>
-
-              {/* Dropdown for "Services" */}
-              {hasSubmenu && isDropdownOpen && (
-                <div
+              {hasSubmenu && activeDropdown === label && (
+                <DropdownContainer
                   style={{ width: headerWidth }}
                   className={`fixed left-1/2 mt-7 -translate-x-1/2 transform rounded-[20px] border border-[#f06e19] bg-white px-8 py-8 text-black shadow-lg`}
-                  onMouseEnter={handleMouseEnter}
+                  onMouseEnter={() => handleMouseEnter(label)}
                   onMouseLeave={handleMouseLeave}
                 >
-                  <div className="grid grid-cols-4 gap-x-20 gap-y-10">
-                    {hasSubmenu.submenu.map((subItem) => (
-                      <div key={subItem.path} className="text-left">
-                        <Link
-                          to={subItem.path}
-                          className="block text-lg font-bold hover:text-[#f06e19]"
-                        >
-                          {subItem.label}
-                        </Link>
-                        <p className="mt-1 text-sm text-gray-500">
+                  <DropdownGrid>
+                    {submenuData?.submenu.map((subItem) => (
+                      <div key={subItem.path}>
+                        <DropdownLink to={subItem.path}>
+                          <DropdownItemTitle>{subItem.label}</DropdownItemTitle>
+                        </DropdownLink>
+                        <DropdownItemDescription>
                           Lorem ipsum dolor sit amet consectetur. Felis
                           ullamcorper nunc vel tincidunt ultrices.
-                        </p>
+                        </DropdownItemDescription>
                       </div>
                     ))}
-                  </div>
-                </div>
+                  </DropdownGrid>
+                </DropdownContainer>
               )}
             </li>
           );
         })}
-      </ul>
+      </NavigationList>
     </nav>
   );
 };

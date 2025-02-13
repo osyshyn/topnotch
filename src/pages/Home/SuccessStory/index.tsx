@@ -61,14 +61,21 @@ const sections = [
       'Founded in 1999, we are, and will always be privately held and family-owned. Completely free from venture capital, private equity and outside interests, what’s best for our customers can truly be our first priority.',
   },
   {
-    title: 'Professionals, not Geeks',
-    description:
-      'Our in-house team of experienced and personable field engineers, consultants, office staff, and computer repair techs are qualified experts with the most up-to-date training available. We are always ready to assist, with a genuine passion for what we do.',
-  },
-  {
     title: 'Dependable Service Quality',
     description:
       'Ask around. We do a good job. Your satisfaction, return business, and referrals are priceless to us. We treat you how we would like to be treated and offer warranties on all of our work.',
+  },
+  {
+    title: 'Professionals, not Geeks',
+    description: (
+      <>
+        Our <span className="text-brand-blue underline">in-house team</span> of
+        experienced and personable field engineers, consultants, office staff,
+        and computer repair techs are qualified experts with the most up-to-date
+        training available. We are always ready to assist, with a genuine
+        passion for what we do.
+      </>
+    ),
   },
   {
     title: 'Here to Stay',

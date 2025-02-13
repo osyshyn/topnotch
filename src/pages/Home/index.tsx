@@ -4,16 +4,12 @@ import { Services } from './Services';
 import { SuccessStory } from './SuccessStory';
 import { ServicesGrid } from './ServicesGrid';
 import { Form } from './Form';
-// import { About } from "./About";
-// import { Title } from "../../page-components/Title";
 
 const Home = () => {
   return (
     <PageWrapper mainClassName="flex flex-col ">
-      {/* Hero Section */}
       <Hero />
 
-      {/* Services Sections */}
       <Services />
 
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -24,15 +20,21 @@ const Home = () => {
         ></path>
       </svg>
 
-      {/* Success Story Section */}
       <SuccessStory />
 
-      {/* <About/> */}
-
-      {/* Services Grid */}
       <ServicesGrid />
 
-      {/* Contact Form */}
+      <svg
+        className="w-full"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+      >
+        <path
+          fill="#252423"
+          fillOpacity="1"
+          d="M0,96L60,106.7C120,117,240,139,360,160C480,181,600,203,720,192C840,181,960,139,1080,122.7C1200,107,1320,117,1380,122.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>
       <Form />
     </PageWrapper>
   );

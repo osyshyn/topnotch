@@ -7,12 +7,10 @@ import { VideoPlayer } from '../../../page-components/VideoPlayer';
 export const WhotWeDo = () => {
   return (
     <div className="mt-[70px] flex items-center justify-between gap-20 pb-[80px]">
-      {/* <!-- Video --> */}
       <div>
-        <VideoPlayer  />
+        <VideoPlayer />
       </div>
 
-      {/* <!-- Text --> */}
       <div>
         <div className="flex flex-col gap-4 text-white">
           <h2 className="font-brand-title text-[48px] font-[700]">

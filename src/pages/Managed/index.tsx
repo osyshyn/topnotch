@@ -6,7 +6,7 @@ import { Form } from '../Home/Form';
 
 const Managed = () => {
   return (
-    <PageWrapper>
+    <PageWrapper className="flex flex-col">
       <Hero />
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path

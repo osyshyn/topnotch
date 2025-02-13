@@ -1,46 +1,41 @@
+import robot from '../../../assets/img/robot.png';
 import Checkmark from '../../../assets/icon/checkmark-square-02.svg';
-import { VideoPlayer } from '../../../page-components/VideoPlayer';
 
-export const Benefits = () => {
+export const Specialize = () => {
   return (
-    <div className="mt-[150px] flex items-center justify-between gap-20 pb-[80px]">
+    <div className="mt-[70px] flex items-center justify-between gap-20 pb-[80px]">
       <div>
-        <VideoPlayer />
+        <img src={robot} alt="" className="h-full w-full" />
       </div>
-
       <div>
         <div className="flex flex-col gap-4 text-white">
           <h2 className="font-brand-title text-[48px] font-[700]">
-            Benefits You Can Expect from Using the Solutions of our Professional
-            Engineers
+            We Specializein
+            <br /> the Following:
           </h2>
-          <p className="font-brand text-[18px] font-[400]">
-            Leave it to the experts when it comes to network-related tasks. Some
-            of the most common are:
-          </p>
         </div>
 
         <div className="mt-10 grid grid-cols-2 gap-8 text-white">
           <ul className="font-brand space-y-4 text-[16px] font-[400]">
             <li className="flex items-center gap-2">
               <img src={Checkmark} alt="" width={24} height={24} />
-              Expansion or migration to a new facility
+              Business Workstations
             </li>
             <li className="flex items-center gap-2">
               <img src={Checkmark} alt="" width={24} height={24} />
-              Cybersecurity & fortification
+              Server Systems
             </li>
             <li className="flex items-center gap-2">
               <img src={Checkmark} alt="" width={24} height={24} />
-              Requirements for better WiFi coverage
+              Point of Sale Terminals and Serversge
             </li>
-          </ul>
-
-          <ul>
             <li className="flex items-center gap-2">
               <img src={Checkmark} alt="" width={24} height={24} />
-              Troubleshooting the inability to connect to resources such as
-              servers, printers, or the Internet
+              Home PCs for the Entire Family
+            </li>
+            <li className="flex items-center gap-2">
+              <img src={Checkmark} alt="" width={24} height={24} />
+              All Types of Laptops
             </li>
           </ul>
         </div>

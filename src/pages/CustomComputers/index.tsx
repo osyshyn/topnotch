@@ -1,9 +1,9 @@
 import { Body } from '../../components/Commercial/Body';
-import { Hero } from '../../components/Commercial/Hero';
+import { Hero } from '../../components/CustomComputers/Hero';
 import { PageWrapper } from '../../components/Layouts/PageWrapper';
 import { Form } from '../Home/Form';
 
-const Commercial = () => {
+const CustomComputers = () => {
   return (
     <PageWrapper className="flex flex-col">
       <Hero />
@@ -33,4 +33,4 @@ const Commercial = () => {
   );
 };
 
-export default Commercial;
+export default CustomComputers;

@@ -9,8 +9,11 @@ export const Header = () => {
   const headerRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <header ref={headerRef} className="bg-brand-black w-full">
-      <div className="mx-auto flex items-center justify-between px-5 py-4 md:px-10 lg:w-full xl:container">
+    <header className="bg-brand-black w-full">
+      <div
+        ref={headerRef}
+        className="mx-auto flex items-center justify-between px-5 py-4 md:px-10 lg:w-full xl:container"
+      >
         {/* Logo */}
         <a href="/" className="flex-shrink-0">
           <img src={Logo} className="h-8 w-auto md:h-10" alt="TopNotch Logo" />

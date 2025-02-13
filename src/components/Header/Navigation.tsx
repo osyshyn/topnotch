@@ -12,28 +12,28 @@ export const Navigation = ({ headerRef }: INavigationProps) => {
   const [headerWidth, setHeaderWidth] = useState(0);
 
   useEffect(() => {
-    if (headerRef.current) {
-      setHeaderWidth(headerRef.current.offsetWidth);
-    }
-
     const handleResize = () => {
       if (headerRef.current) {
-        const screenWidth = window.innerWidth;
+        const headerWidth = headerRef.current.offsetWidth;
+        console.log(headerWidth);
 
         let paddingLeft = 16;
         let paddingRight = 16;
 
-        if (screenWidth >= 1024) {
+        if (headerWidth >= 1024) {
           paddingLeft = 32;
           paddingRight = 32;
         }
 
-        const widthWithoutPadding =
-          headerRef.current.clientWidth - paddingLeft - paddingRight;
+        const widthWithoutPadding = headerWidth - paddingLeft - paddingRight;
 
         setHeaderWidth(widthWithoutPadding);
       }
     };
+
+    if (headerRef.current) {
+      handleResize();
+    }
 
     window.addEventListener('resize', handleResize);
 

@@ -16,7 +16,7 @@ export const Residential = () => {
         />
       </div>
 
-      <div className="flex flex-col justify-center">
+      <div className="order-first flex flex-col justify-center md:order-last">
         <h2 className="font-brand-title text-4xl font-bold text-white sm:text-5xl">
           Residential Services
         </h2>
@@ -37,7 +37,10 @@ export const Residential = () => {
             </li>
           ))}
         </ul>
-        <Button className="mt-10 rounded-full" variant={ButtonVariants.PRIMARY}>
+        <Button
+          className="mt-10 w-full max-w-none self-center rounded-full sm:max-w-[200px] md:w-auto md:self-start"
+          variant={ButtonVariants.PRIMARY}
+        >
           Residential
           <img
             src={ArrowUp}

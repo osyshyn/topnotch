@@ -42,7 +42,10 @@ export const Company = () => {
             </li>
           ))}
         </div>
-        <Button className="mt-10 rounded-full" variant={ButtonVariants.PRIMARY}>
+        <Button
+          className="mt-10 w-full max-w-none self-center rounded-full sm:max-w-[200px] md:w-auto md:self-start"
+          variant={ButtonVariants.PRIMARY}
+        >
           Contact Us
           <img
             src={ArrowUp}

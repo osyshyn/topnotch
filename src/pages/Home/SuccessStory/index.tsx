@@ -12,15 +12,15 @@ export const SuccessStory = () => {
             <br className="hidden md:block" />
             Success With Top Notch
           </h2>
-          <div className="mt-6 flex gap-3 sm:gap-4 lg:ml-auto">
+          <div className="mt-6 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:gap-4 lg:ml-auto">
             <Button
-              className="rounded-full px-4 py-2 text-sm sm:text-base"
+              className="w-full max-w-none rounded-full px-4 py-2 text-sm sm:w-auto sm:max-w-[200px] sm:text-base"
               variant={ButtonVariants.SECONDARY_SQUARE}
             >
               Read More
             </Button>
             <Button
-              className="rounded-full px-4 py-2 text-sm sm:text-base"
+              className="w-full max-w-none rounded-full px-4 py-2 text-sm sm:w-auto sm:max-w-[200px] sm:text-base"
               variant={ButtonVariants.SECONDARY}
             >
               Contact Us

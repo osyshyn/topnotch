@@ -26,7 +26,7 @@ export const Footer = () => {
         </div>
 
         {/* Sales & Support Section */}
-        <div className="flex flex-row gap-12">
+        <div className="hidden flex-row gap-12 md:flex">
           <div className="flex flex-1 flex-col gap-5 lg:flex-[0.2]">
             <h4 className="font-['Source_Sans_Pro'] text-base leading-5 font-bold text-white">
               Sales & Service inquiries
@@ -54,7 +54,7 @@ export const Footer = () => {
         </div>
 
         {/* Address Section */}
-        <div className="flex flex-row gap-12">
+        <div className="hidden flex-row gap-12 md:flex">
           <div className="flex flex-1 flex-col gap-5 lg:flex-[0.2]">
             <h4 className="font-['Source_Sans_Pro'] text-base leading-5 font-bold text-white">
               Richmond

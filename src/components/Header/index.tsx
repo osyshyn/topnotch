@@ -20,7 +20,7 @@ export const Header = () => {
     >
       <div
         ref={headerRef}
-        className="mx-auto flex items-center justify-between border-b-[1px] border-[#ECECEC] px-5 py-4 md:px-10 lg:w-full lg:border-none xl:container"
+        className={`mx-auto flex items-center justify-between ${isMobileNav && 'border-b-[1px]'} ${isMobileNav && 'border-[#ECECEC]'} px-5 py-4 md:px-10 lg:w-full lg:border-none xl:container`}
       >
         {/* Logo */}
 

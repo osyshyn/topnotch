@@ -22,12 +22,7 @@ export const PageWrapper: FC<Props> = ({
         <Header />
       </div>
 
-      <div
-        className={cn(
-          'scrollbar flex flex-1 flex-col gap-4 overflow-y-auto',
-          className
-        )}
-      >
+      <div className={cn('scrollbar flex flex-1 flex-col gap-4', className)}>
         <main className={cn('flex-1 items-center', mainClassName)}>
           {children}
         </main>

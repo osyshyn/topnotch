@@ -1,65 +1,24 @@
 import { Window } from '../../../page-components/Window';
-import icon1 from '../../../assets/icon/Services1.png';
-import icon2 from '../../../assets/icon/Services2.png';
-import icon3 from '../../../assets/icon/Services3.png';
-import icon4 from '../../../assets/icon/Services4.png';
-import icon5 from '../../../assets/icon/Services5.png';
-import icon6 from '../../../assets/icon/Services6.png';
+import './slider.css';
 import square from '../../../assets/icon/sqaure.svg';
-
-const servicesData = [
-  {
-    icon: icon1,
-    title: 'Managed IT Services',
-    description:
-      'Equipment outages, data loss, or loss of connectivity can be devastating to businesses. Our managed IT services are designed to safeguard our clients from these risks.',
-  },
-  {
-    icon: icon2,
-    title: 'Network management',
-    description:
-      "Our network services connect your team to each other, the Internet, and essential tools. Top Notch's systems support your company’s future vision, creating a blueprint for success.",
-  },
-  {
-    icon: icon3,
-    title: 'Industry Specialties',
-    description:
-      "Whether you're a business, medical practice, or organization seeking tech insights, we can help. As a top managed IT provider, we offer expert IT support, managed services, remote access...",
-  },
-  {
-    icon: icon4,
-    title: 'Custom Computers',
-    description:
-      'We proudly offer a line of custom-built systems that excel in performance, reliability, upgradeability, and value. Each computer is designed and assembled to your specifications.',
-  },
-  {
-    icon: icon5,
-    title: 'Residential',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. Commodo aliquam eu nibh feugiat rhoncus. Et mauris tortor et tellus sed et pellentesque euismod.  et tellus sed et pellentesque euismod.',
-  },
-  {
-    icon: icon6,
-    title: 'Computer Repair',
-    description:
-      'Lorem ipsum dolor sit amet consectetur. Commodo aliquam eu nibh feugiat rhoncus. Et mauris tortor et tellus sed et pellentesque euismod.  et tellus sed et pellentesque euismod.',
-  },
-];
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import { servicesData, settings } from './constants';
 
 export const ServicesGrid = () => {
   return (
-    <Window className="mx-5 mb-10 max-w-7xl bg-[#4F78D6] p-5 md:mx-10 md:mb-28 md:p-10 xl:mx-20 xl:p-20">
-
+    <Window className="relative mx-5 mb-10 max-w-7xl bg-[#4F78D6] !p-5 md:mx-10 md:mb-28 md:!p-10 xl:mx-auto xl:!p-20">
       <div className="mb-4 text-center">
         <h2 className="font-brand-title mb-6 text-3xl font-bold text-white sm:text-[80px]">
           Our Services
         </h2>
-        <p className="font-brand font-brand-weight text-sm text-white sm:text-2xl">
+        <p className="font-brand text-[16px] text-white sm:text-2xl">
           We have a high list of services for any of your problems
         </p>
       </div>
 
-      <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-8 hidden grid-cols-1 gap-6 sm:grid-cols-2 md:grid lg:grid-cols-3">
         {servicesData.map((service, index) => (
           <div
             key={index}
@@ -82,7 +41,32 @@ export const ServicesGrid = () => {
         ))}
       </div>
 
-      <div className="mt-8 text-center">
+      {/* Mobile Slider */}
+      <div className="block md:hidden">
+        <Slider {...settings}>
+          {servicesData.map((service, index) => (
+            <div key={index} className="flex w-full">
+              <div className="flex min-h-[321px] flex-col items-center justify-center rounded-[20px] bg-[#3559AD] p-5 sm:min-h-[500px] sm:justify-around">
+                <div className="mb-4 flex items-center justify-center rounded-lg text-[#4F78D6]">
+                  <img
+                    className="h-12 w-12 sm:h-16 sm:w-16"
+                    src={service.icon}
+                    alt={service.title}
+                  />
+                </div>
+                <h3 className="mb-2 text-center text-lg font-semibold text-white sm:text-3xl">
+                  {service.title}
+                </h3>
+                <p className="text-center text-[16px] leading-relaxed text-white/80 sm:text-xl">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      <div className="mt-10 text-center">
         <button className="inline-flex items-center rounded-full bg-white px-6 py-3 font-semibold text-[#4F78D6] transition-colors hover:bg-blue-50">
           View All
           <svg
@@ -101,8 +85,8 @@ export const ServicesGrid = () => {
           </svg>
         </button>
       </div>
-      <div className="absolute top-[5%] right-[20%]">
-        <img src={square} alt="" className="h-auto w-[71px] text-black" />
+      <div className="absolute top-[5%] right-[20%] hidden xl:block">
+        <img src={square} alt="Square" className="h-auto w-[71px] text-black" />
       </div>
     </Window>
   );

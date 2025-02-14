@@ -8,7 +8,7 @@ import ComputerBusiness from '../../../../assets/img/computer.png';
 
 export const Company = () => {
   return (
-    <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 xl:p-20">
+    <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
       <div className="flex flex-col justify-center">
         <h2 className="font-brand-title text-4xl font-bold text-white sm:text-5xl">
           Commercial Services
@@ -56,11 +56,11 @@ export const Company = () => {
         </Button>
       </div>
 
-      <div className="relative flex lg:justify-center">
+      <div className="relative flex justify-center md:justify-start lg:justify-center">
         <img
           src={ComputerBusiness}
           alt=""
-          className="h-auto md:absolute md:right-0 md:max-w-[301px] lg:max-w-full"
+          className="h-auto w-full md:absolute md:right-0 md:max-w-[301px] lg:relative lg:max-w-full"
         />
       </div>
     </div>

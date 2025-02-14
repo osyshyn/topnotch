@@ -8,7 +8,7 @@ export const Footer = () => {
     <footer className="flex w-full flex-col bg-[#191919] px-5 pt-14 pb-10 md:px-10 xl:px-20">
       <div className="flex flex-col gap-10">
         {/* Header Row */}
-        <div className="flex flex-col items-center border-b border-white/30 pb-8 lg:flex-row lg:items-start lg:justify-between">
+        <div className="flex flex-col items-center gap-4 border-b border-white/30 pb-8 lg:flex-row lg:items-start lg:justify-between lg:gap-0">
           <img
             className="w-[228px] lg:h-[68px] lg:w-[323px]"
             src={Logo}
@@ -24,6 +24,10 @@ export const Footer = () => {
               Providing premier computer and network support to businesses and
               home users in Virginia.
             </p>
+          </div>
+          <div className="flex gap-3.5 md:hidden">
+            <img src={facebook} alt="facebook" />
+            <img src={linkedin} alt="linkedin" />
           </div>
         </div>
         {/* Sales & Support Section */}
@@ -49,11 +53,10 @@ export const Footer = () => {
               Call toll-free
             </h4>
             <p className="font-['Source_Sans_Pro'] text-sm leading-[1.25] font-normal text-white">
-
               800-307-1249
             </p>
           </div>
-          <div className="absolute right-0 flex gap-3.5">
+          <div className="absolute right-[5%] flex gap-3.5">
             <img src={facebook} alt="facebook" />
             <img src={linkedin} alt="linkedin" />
           </div>
@@ -66,7 +69,6 @@ export const Footer = () => {
               Richmond
             </h4>
             <p className="font-brand text-sm leading-[1.25] font-normal text-white">
-
               8401 Mayland Dr, Suite. #G
               <br />
               Richmond, VA 23294
@@ -80,7 +82,6 @@ export const Footer = () => {
               Washington D.C.
             </h4>
             <p className="font-brand text-sm leading-[1.25] font-normal text-white">
-
               7389 Lee Hwy, Ste. #310
               <br />
               Falls Church, VA 22042
@@ -94,7 +95,6 @@ export const Footer = () => {
               Charlottesville
             </h4>
             <p className="font-brand text-sm leading-[1.25] font-normal text-white">
-
               300 Preston Ave, Ste. #304
               <br />
               Charlottesville, VA 22902
@@ -108,12 +108,11 @@ export const Footer = () => {
       </div>
 
       {/* Copyright Section */}
-      <div className="mt-8 flex justify-between">
-        <p className="font-brand text-sm text-white">
-
-          © Copyright Top Notch 2024. All rights reserved.
+      <div className="mt-8 flex flex-col justify-between gap-2 sm:flex-row sm:gap-0">
+        <p className="font-brand text-center text-sm text-white sm:text-start">
+          © Copyright Top Notch 2024. All rights res erved.
         </p>
-        <div className="space-x-4">
+        <div className="flex justify-center space-x-4 sm:block">
           <a
             href="#"
             className="font-brand text-sm text-white hover:opacity-80"

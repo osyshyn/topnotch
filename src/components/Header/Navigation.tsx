@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { NAVIGATION_LINKS, navItems } from './constants';
 import {
@@ -10,7 +10,11 @@ import {
   DropdownItemDescription,
 } from './Sidebar.components';
 
-export const Navigation = () => {
+interface INavigationProps {
+  headerRef: React.RefObject<HTMLDivElement | null>;
+}
+
+export const Navigation = ({ headerRef }: INavigationProps) => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const timeoutRef = useRef<number | undefined>(undefined);
   const [headerWidth, setHeaderWidth] = useState(0);
@@ -19,7 +23,6 @@ export const Navigation = () => {
     const handleResize = () => {
       if (headerRef?.current) {
         const headerWidth = headerRef?.current.offsetWidth;
-        console.log(headerWidth);
 
         let paddingLeft = 16;
         let paddingRight = 16;
@@ -51,7 +54,7 @@ export const Navigation = () => {
     setActiveDropdown(label);
   };
 
-  const handleMouseLeave = () => 
+  const handleMouseLeave = () => {
     timeoutRef.current = window.setTimeout(() => {
       setActiveDropdown(null);
     }, 300);
@@ -77,7 +80,6 @@ export const Navigation = () => {
               {hasSubmenu && activeDropdown === label && (
                 <DropdownContainer
                   style={{ width: headerWidth }}
-                  className={`fixed left-1/2 mt-7 -translate-x-1/2 transform rounded-[20px] border border-[#f06e19] bg-white px-8 py-8 text-black shadow-lg`}
                   onMouseEnter={() => handleMouseEnter(label)}
                   onMouseLeave={handleMouseLeave}
                 >

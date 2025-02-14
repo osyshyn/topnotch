@@ -7,12 +7,12 @@ import { Button } from '../../../../page-components/Button';
 
 export const Residential = () => {
   return (
-    <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 xl:p-20">
+    <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
       <div className="flex justify-center">
         <img
           src={Computer}
           alt=""
-          className="h-auto md:max-w-[301px] lg:max-w-full"
+          className="h-auto w-full md:max-w-[301px] lg:max-w-full"
         />
       </div>
 

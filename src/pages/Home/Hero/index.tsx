@@ -3,9 +3,8 @@ import daimond from '../../../assets/icon/daimond.svg';
 
 export const Hero = () => {
   return (
-    <div className="bg-brand-black flex w-full flex-wrap items-center justify-center px-5 pt-[100px] md:px-10 xl:px-6">
-
-      <div className="max-w-2xl">
+    <div className="bg-brand-black flex w-full flex-wrap items-center justify-center px-5 pt-[100px] md:px-10 xl:px-20">
+      <div className="relative max-w-2xl">
         <h1 className="font-brand-title text-center text-[56px] font-[700] text-white sm:text-[80px]">
           Virginia's Choice For{' '}
           <span className="text-orange-500">IT Support</span>
@@ -14,10 +13,10 @@ export const Hero = () => {
           Providing premier computer and network support to businesses and home
           users in Virginia.
         </p>
-        <div className="absolute top-[30%] right-[20%]">
+        <div className="absolute top-[30%] right-[-20%] hidden lg:block">
           <img src={square} alt="" />
         </div>
-        <div className="absolute top-[50%] left-[20%]">
+        <div className="absolute top-[70%] left-[-20%] hidden lg:block">
           <img src={daimond} alt="" />
         </div>
       </div>

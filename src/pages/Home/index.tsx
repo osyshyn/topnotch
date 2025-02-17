@@ -7,7 +7,7 @@ import { Form } from './Form';
 
 const Home = () => {
   return (
-    <PageWrapper mainClassName="flex flex-col ">
+    <PageWrapper>
       <Hero />
 
       <Services />

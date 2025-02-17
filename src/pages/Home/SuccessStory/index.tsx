@@ -1,26 +1,30 @@
 import { ButtonVariants } from '../../../@types/button';
 import { Button } from '../../../page-components/Button';
 import ArrowUp from '../../../assets/icon/carbon_arrow-up-right.svg';
+import square from '../../../assets/icon/dark-square.svg';
 
 export const SuccessStory = () => {
   return (
-    <div className="w-full bg-white px-4 py-16 sm:py-20 lg:mt-28 lg:mb-36">
-      <div className="mx-auto max-w-7xl px-4">
+    <div className="relative w-full bg-white px-5 py-16 sm:py-20 md:px-10 lg:mt-28 lg:mb-36 xl:px-6">
+      <div className="absolute top-[5%] left-[40%] hidden xl:block">
+        <img src={square} alt="" />
+      </div>
+      <div className="mx-auto max-w-7xl">
         <div className="mb-12 flex flex-col items-center text-center lg:mb-16 lg:flex-row lg:items-start lg:text-left">
           <h2 className="font-brand-title mb-6 max-w-2xl text-3xl font-bold text-[#1C1C1C] sm:text-4xl lg:mb-0 lg:text-5xl">
             Achieve The Right
             <br className="hidden md:block" />
             Success With Top Notch
           </h2>
-          <div className="mt-6 flex gap-3 sm:gap-4 lg:ml-auto">
+          <div className="mt-6 hidden w-full flex-col gap-3 sm:flex sm:w-auto sm:flex-row sm:gap-4 lg:ml-auto">
             <Button
-              className="rounded-full px-4 py-2 text-sm sm:text-base"
+              className="w-full max-w-none rounded-full px-4 py-2 text-sm sm:w-auto sm:max-w-[200px] sm:text-base"
               variant={ButtonVariants.SECONDARY_SQUARE}
             >
               Read More
             </Button>
             <Button
-              className="rounded-full px-4 py-2 text-sm sm:text-base"
+              className="w-full max-w-none rounded-full px-4 py-2 text-sm sm:w-auto sm:max-w-[200px] sm:text-base"
               variant={ButtonVariants.SECONDARY}
             >
               Contact Us
@@ -48,6 +52,26 @@ export const SuccessStory = () => {
               </p>
             </div>
           ))}
+        </div>
+        <div className="mt-6 flex w-full flex-col gap-3 sm:hidden sm:w-auto sm:flex-row sm:gap-4">
+          <Button
+            className="w-full max-w-none rounded-full px-4 py-2 text-sm sm:w-auto sm:max-w-[200px] sm:text-base"
+            variant={ButtonVariants.SECONDARY_SQUARE}
+          >
+            Read More
+          </Button>
+          <Button
+            className="w-full max-w-none rounded-full px-4 py-2 text-sm sm:w-auto sm:max-w-[200px] sm:text-base"
+            variant={ButtonVariants.SECONDARY}
+          >
+            Contact Us
+            <img
+              src={ArrowUp}
+              className="ml-2 h-4 w-4 sm:h-5 sm:w-5"
+              alt=""
+              aria-hidden="true"
+            />
+          </Button>
         </div>
       </div>
     </div>

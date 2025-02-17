@@ -16,12 +16,6 @@ export const DropdownContainer = styled.div`
   color: black;
   border-radius: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-  @media (max-width: 768px) {
-    padding: 1rem;
-    border-radius: 0;
-    width: calc(100vw - 1rem);
-  }
 `;
 
 export const DropdownGrid = styled.div`
@@ -74,6 +68,11 @@ export const NavigationList = styled.ul`
   font-size: 18px;
   color: white;
   margin-right: 135px;
+
+  @media (max-width: 1115px) {
+    gap: 2rem;
+    margin-right: 40px;
+  }
 
   @media (max-width: 1024px) {
     gap: 1.5rem;

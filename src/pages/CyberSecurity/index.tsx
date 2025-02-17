@@ -169,14 +169,15 @@ const CyberSecurityPage = () => {
 
         <div>
           <div className="bg-white">
-            <div className="flex h-full min-h-screen w-full flex-col items-center justify-center gap-8 px-[80px]">
+            <div className="flex h-full min-h-screen w-full flex-col items-center justify-center gap-8 pl-[80px]">
               <div className="flex flex-col items-start justify-start">
-                <h2 className="font-brand-title text-[48px]">
+                <h2 className="font-brand-title text-[48px] font-[700]">
                   Premium Offerings for Security & Compliance
                 </h2>
                 <p className="font-brand text-[18px] text-[#7A7A7A]">
-                  If you need services that go above and beyond the standard
-                  service call, we also offer:
+                  The following tools, coupled with our industry-leading
+                  response time guarantee, are available exclusively to clients
+                  with a managed contract:
                 </p>
               </div>
               <div className="w-full">

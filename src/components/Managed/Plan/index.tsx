@@ -4,11 +4,11 @@ export const Paln = () => {
   return (
     <div className="mx-[80px] mt-[70px] flex flex-col items-start justify-center">
       <div className="flex flex-wrap gap-4">
-        <h1 className="font-brand-title text-brand-black text-[48px] font-[700]">
+        <h1 className="font-brand-title text-brand-black text-center text-[48px] font-[700]">
           When is a Managed IT <br /> Plan the Right Move?
         </h1>
       </div>
-      <div className="mt-10 flex w-full justify-between gap-10">
+      <div className="mt-10 flex w-full flex-wrap gap-10 md:justify-between">
         <Window className="border-brand-gray flex-1 border">
           <div className="flex flex-col justify-center gap-6">
             <h1 className="font-brand text-brand-black text-[20px] font-[600]">

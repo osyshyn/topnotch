@@ -2,7 +2,7 @@ import { Window } from '../../../page-components/Window';
 
 export const Info = () => {
   return (
-    <Window className="font-brand font-brand-weight mt-[70px] w-full bg-[#191919] px-[100px] py-[70px] text-center text-2xl text-white">
+    <Window className="font-brand font-brand-weight mt-[70px] w-full bg-[#191919] p-2.5 text-center text-[16px] text-white md:px-[100px] md:py-[70px] md:text-[24px]">
       <div>
         <p className="mb-1">
           Our monthly maintenance contracts include a base bundle of remote

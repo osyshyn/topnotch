@@ -1,10 +1,9 @@
 import { PageWrapper } from '../../components/Layouts/PageWrapper';
-import { Advantages } from '../../components/Managed/Advantages';
-import { Body } from '../../components/Managed/Body';
-import { Hero } from '../../components/Managed/Hero';
+import { Body } from '../../components/Residential/Body';
+import { Hero } from '../../components/Residential/Hero';
 import { Form } from '../Home/Form';
 
-const Managed = () => {
+const Residential = () => {
   return (
     <PageWrapper className="flex flex-col">
       <Hero />
@@ -27,10 +26,9 @@ const Managed = () => {
           d="M0,96L60,106.7C120,117,240,139,360,160C480,181,600,203,720,192C840,181,960,139,1080,122.7C1200,107,1320,117,1380,122.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
         ></path>
       </svg>
-      <Advantages />
+      {/* <Advantages /> */}
       <Form />
     </PageWrapper>
   );
 };
-
-export default Managed;
+export default Residential;

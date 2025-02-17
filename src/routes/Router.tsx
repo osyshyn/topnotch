@@ -8,6 +8,7 @@ import NetworkManagement from '../pages/NetworkManagement';
 import Managed from '../pages/Managed';
 import Commercial from '../pages/Commercial';
 import CustomComputers from '../pages/CustomComputers';
+import Residential from '../pages/Residential';
 
 const ROUTES = [
   {
@@ -34,6 +35,10 @@ const ROUTES = [
   {
     element: <CustomComputers />,
     path: PATHNAMES.SERVICES_CUSTOM,
+  },
+  {
+    element: <Residential />,
+    path: PATHNAMES.SERVICES_RESIDENTIAL,
   },
 ];
 

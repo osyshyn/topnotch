@@ -50,7 +50,7 @@ export const Advantages = () => {
   return (
     <div className="bg-brand-black">
       <div className="mb-10">
-        <h2 className="font-brand-title text text-center text-[48px] font-[700] text-white">
+        <h2 className="font-brand-title text-center text-[48px] font-[700] text-white">
           Advantages of
           <br /> Comprehensive Managed Plans
         </h2>

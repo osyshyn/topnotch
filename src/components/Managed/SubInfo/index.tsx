@@ -4,7 +4,7 @@ import HumanImg from '../../../assets/img/human.png';
 export const SubInfo = () => {
   return (
     <div>
-      <div className="mt-[70px] flex justify-between gap-20 px-20">
+      <div className="mt-[70px] flex flex-wrap-reverse lg:flex-nowrap lg:justify-between lg:gap-20 lg:px-20">
         <div>
           <img src={HumanImg} alt="PersonImg" />
         </div>

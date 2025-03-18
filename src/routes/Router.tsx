@@ -9,6 +9,8 @@ import Managed from '../pages/Managed';
 import Commercial from '../pages/Commercial';
 import CustomComputers from '../pages/CustomComputers';
 import Residential from '../pages/Residential';
+import AboutRates from '../pages/AboutRates';
+import AboutPrivacy from '../pages/AboutPrivacy';
 
 const ROUTES = [
   {
@@ -39,6 +41,15 @@ const ROUTES = [
   {
     element: <Residential />,
     path: PATHNAMES.SERVICES_RESIDENTIAL,
+  },
+
+  {
+    element: <AboutRates />,
+    path: PATHNAMES.ABOUT_RATES,
+  },
+  {
+    element: <AboutPrivacy />,
+    path: PATHNAMES.ABOUT_PRIVACY,
   },
 ];
 
